@@ -1,0 +1,167 @@
+{
+	"repcode": "000000",
+	"quota": {
+		"dim": {
+			"dic": [
+				{
+					"dic_code": "PGW",
+					"dic_name": "PGW",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171012",
+								"data_set_row": [
+									{
+										"row_num": 2,
+										"row_data": [
+											{
+												"data_code": "FILE_SIZE",
+												"data_value": "344"
+											}
+										]
+									}
+								]
+							},
+							{
+								"cycle_value": "20171011",
+								"data_set_row": [
+									{
+										"row_num": 3,
+										"row_data": [
+											{
+												"data_code": "FILE_SIZE",
+												"data_value": "800"
+											}
+										]
+									}
+								]
+							},
+							{
+								"cycle_value": "20171013",
+								"data_set_row": [
+									{
+										"row_num": 1,
+										"row_data": [
+											{
+												"data_code": "FILE_SIZE",
+												"data_value": "544"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "LASTDAY"
+					}
+				},
+				{
+					"dic_code": "SGW",
+					"dic_name": "SGW",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171012",
+								"data_set_row": [
+									{
+										"row_num": 5,
+										"row_data": [
+											{
+												"data_code": "FILE_SIZE",
+												"data_value": "3344"
+											}
+										]
+									}
+								]
+							},
+							{
+								"cycle_value": "20171011",
+								"data_set_row": [
+									{
+										"row_num": 6,
+										"row_data": [
+											{
+												"data_code": "FILE_SIZE",
+												"data_value": "8000"
+											}
+										]
+									}
+								]
+							},
+							{
+								"cycle_value": "20171013",
+								"data_set_row": [
+									{
+										"row_num": 4,
+										"row_data": [
+											{
+												"data_code": "FILE_SIZE",
+												"data_value": "4444"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "LASTDAY"
+					}
+				},
+				{
+					"dic_code": "SGSN",
+					"dic_name": "SGSN",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171012",
+								"data_set_row": [
+									{
+										"row_num": 8,
+										"row_data": [
+											{
+												"data_code": "FILE_SIZE",
+												"data_value": "2344"
+											}
+										]
+									}
+								]
+							},
+							{
+								"cycle_value": "20171011",
+								"data_set_row": [
+									{
+										"row_num": 9,
+										"row_data": [
+											{
+												"data_code": "FILE_SIZE",
+												"data_value": "1000"
+											}
+										]
+									}
+								]
+							},
+							{
+								"cycle_value": "20171013",
+								"data_set_row": [
+									{
+										"row_num": 7,
+										"row_data": [
+											{
+												"data_code": "FILE_SIZE",
+												"data_value": "3444"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "LASTDAY"
+					}
+				}
+			],
+			"dim_code": "DIM_SUB_BUSI_TYPE",
+			"dim_name": "采集子业务类型"
+		},
+		"quota_code": "JFCJ00005",
+		"quota_name": "语音话单采集文件数量，文件大小近7天数据环比情况"
+	},
+	"repmsg": "OK"
+}

@@ -1,0 +1,106 @@
+{
+	"repcode": "000000",
+	"quota": {
+		"dim": {
+			"dic": [
+				{
+					"dic_code": "PGW",
+					"dic_name": "PGW",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171013132725",
+								"data_set_row": [
+									{
+										"row_num": 1,
+										"row_data": [
+											{
+												"data_code": "FILE_CNT",
+												"data_value": "0"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				},
+				{
+					"dic_code": "SGW",
+					"dic_name": "SGW",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171013132725",
+								"data_set_row": [
+									{
+										"row_num": 2,
+										"row_data": [
+											{
+												"data_code": "FILE_CNT",
+												"data_value": "0"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				},
+				{
+					"dic_code": "SGSN",
+					"dic_name": "SGSN",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171013132725",
+								"data_set_row": [
+									{
+										"row_num": 3,
+										"row_data": [
+											{
+												"data_code": "FILE_CNT",
+												"data_value": "0"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				},
+				{
+					"dic_code": "INTR",
+					"dic_name": "国际漫游出访",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171013132725",
+								"data_set_row": [
+									{
+										"row_num": 4,
+										"row_data": [
+											{
+												"data_code": "FILE_CNT",
+												"data_value": "0"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				}
+			],
+			"dim_code": "DIM_SUB_BUSI_TYPE",
+			"dim_name": "采集子业务类型"
+		},
+		"quota_code": "JFCJ00001",
+		"quota_name": "话单采集积压监控"
+	},
+	"repmsg": "OK"
+}

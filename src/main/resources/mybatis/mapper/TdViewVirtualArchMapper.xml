@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.frontend.web.dao.TdViewVirtualArchMapper" >
+  <resultMap id="BaseResultMap" type="com.frontend.web.bo.TdViewVirtualArch" >
+    <id column="virtual_arch_id" property="virtualArchId" jdbcType="BIGINT" />
+    <result column="arch_code" property="archCode" jdbcType="VARCHAR" />
+    <result column="route_id" property="routeId" jdbcType="BIGINT" />
+    <result column="virtual_arch_code" property="virtualArchCode" jdbcType="VARCHAR" />
+    <result column="virtual_arch_name" property="virtualArchName" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="CHAR" />
+    <result column="staytime_value" property="staytimeValue" jdbcType="BIGINT" />
+    <result column="staytime_unit" property="staytimeUnit" jdbcType="CHAR" />
+    <result column="page_code" property="pageCode" jdbcType="VARCHAR" />
+    <result column="default_tag" property="defaultTag" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    virtual_arch_id, arch_code, route_id, virtual_arch_code, virtual_arch_name, state, 
+    staytime_value, staytime_unit, page_code, default_tag
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.frontend.web.bo.TdViewVirtualArchCriteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'false' as QUERYID,
+    <include refid="Base_Column_List" />
+    from td_view_virtual_arch
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <if test="limitStart != null and limitStart>=0" >
+      limit #{limitStart} , #{limitEnd}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from td_view_virtual_arch
+    where virtual_arch_id = #{virtualArchId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="Long" >
+    delete from td_view_virtual_arch
+    where virtual_arch_id = #{virtualArchId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.frontend.web.bo.TdViewVirtualArchCriteria" >
+    delete from td_view_virtual_arch
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.frontend.web.bo.TdViewVirtualArch" >
+    insert into td_view_virtual_arch (virtual_arch_id, arch_code, route_id, 
+      virtual_arch_code, virtual_arch_name, state, 
+      staytime_value, staytime_unit, page_code, 
+      default_tag)
+    values (#{virtualArchId,jdbcType=BIGINT}, #{archCode,jdbcType=VARCHAR}, #{routeId,jdbcType=BIGINT}, 
+      #{virtualArchCode,jdbcType=VARCHAR}, #{virtualArchName,jdbcType=VARCHAR}, #{state,jdbcType=CHAR}, 
+      #{staytimeValue,jdbcType=BIGINT}, #{staytimeUnit,jdbcType=CHAR}, #{pageCode,jdbcType=VARCHAR}, 
+      #{defaultTag,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.frontend.web.bo.TdViewVirtualArch" >
+    insert into td_view_virtual_arch
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="virtualArchId != null" >
+        virtual_arch_id,
+      </if>
+      <if test="archCode != null" >
+        arch_code,
+      </if>
+      <if test="routeId != null" >
+        route_id,
+      </if>
+      <if test="virtualArchCode != null" >
+        virtual_arch_code,
+      </if>
+      <if test="virtualArchName != null" >
+        virtual_arch_name,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="staytimeValue != null" >
+        staytime_value,
+      </if>
+      <if test="staytimeUnit != null" >
+        staytime_unit,
+      </if>
+      <if test="pageCode != null" >
+        page_code,
+      </if>
+      <if test="defaultTag != null" >
+        default_tag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="virtualArchId != null" >
+        #{virtualArchId,jdbcType=BIGINT},
+      </if>
+      <if test="archCode != null" >
+        #{archCode,jdbcType=VARCHAR},
+      </if>
+      <if test="routeId != null" >
+        #{routeId,jdbcType=BIGINT},
+      </if>
+      <if test="virtualArchCode != null" >
+        #{virtualArchCode,jdbcType=VARCHAR},
+      </if>
+      <if test="virtualArchName != null" >
+        #{virtualArchName,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=CHAR},
+      </if>
+      <if test="staytimeValue != null" >
+        #{staytimeValue,jdbcType=BIGINT},
+      </if>
+      <if test="staytimeUnit != null" >
+        #{staytimeUnit,jdbcType=CHAR},
+      </if>
+      <if test="pageCode != null" >
+        #{pageCode,jdbcType=VARCHAR},
+      </if>
+      <if test="defaultTag != null" >
+        #{defaultTag,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.frontend.web.bo.TdViewVirtualArchCriteria" resultType="java.lang.Integer" >
+    select count(*) from td_view_virtual_arch
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update td_view_virtual_arch
+    <set >
+      <if test="record.virtualArchId != null" >
+        virtual_arch_id = #{record.virtualArchId,jdbcType=BIGINT},
+      </if>
+      <if test="record.archCode != null" >
+        arch_code = #{record.archCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.routeId != null" >
+        route_id = #{record.routeId,jdbcType=BIGINT},
+      </if>
+      <if test="record.virtualArchCode != null" >
+        virtual_arch_code = #{record.virtualArchCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.virtualArchName != null" >
+        virtual_arch_name = #{record.virtualArchName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.state != null" >
+        state = #{record.state,jdbcType=CHAR},
+      </if>
+      <if test="record.staytimeValue != null" >
+        staytime_value = #{record.staytimeValue,jdbcType=BIGINT},
+      </if>
+      <if test="record.staytimeUnit != null" >
+        staytime_unit = #{record.staytimeUnit,jdbcType=CHAR},
+      </if>
+      <if test="record.pageCode != null" >
+        page_code = #{record.pageCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.defaultTag != null" >
+        default_tag = #{record.defaultTag,jdbcType=CHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update td_view_virtual_arch
+    set virtual_arch_id = #{record.virtualArchId,jdbcType=BIGINT},
+      arch_code = #{record.archCode,jdbcType=VARCHAR},
+      route_id = #{record.routeId,jdbcType=BIGINT},
+      virtual_arch_code = #{record.virtualArchCode,jdbcType=VARCHAR},
+      virtual_arch_name = #{record.virtualArchName,jdbcType=VARCHAR},
+      state = #{record.state,jdbcType=CHAR},
+      staytime_value = #{record.staytimeValue,jdbcType=BIGINT},
+      staytime_unit = #{record.staytimeUnit,jdbcType=CHAR},
+      page_code = #{record.pageCode,jdbcType=VARCHAR},
+      default_tag = #{record.defaultTag,jdbcType=CHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.frontend.web.bo.TdViewVirtualArch" >
+    update td_view_virtual_arch
+    <set >
+      <if test="archCode != null" >
+        arch_code = #{archCode,jdbcType=VARCHAR},
+      </if>
+      <if test="routeId != null" >
+        route_id = #{routeId,jdbcType=BIGINT},
+      </if>
+      <if test="virtualArchCode != null" >
+        virtual_arch_code = #{virtualArchCode,jdbcType=VARCHAR},
+      </if>
+      <if test="virtualArchName != null" >
+        virtual_arch_name = #{virtualArchName,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=CHAR},
+      </if>
+      <if test="staytimeValue != null" >
+        staytime_value = #{staytimeValue,jdbcType=BIGINT},
+      </if>
+      <if test="staytimeUnit != null" >
+        staytime_unit = #{staytimeUnit,jdbcType=CHAR},
+      </if>
+      <if test="pageCode != null" >
+        page_code = #{pageCode,jdbcType=VARCHAR},
+      </if>
+      <if test="defaultTag != null" >
+        default_tag = #{defaultTag,jdbcType=CHAR},
+      </if>
+    </set>
+    where virtual_arch_id = #{virtualArchId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.frontend.web.bo.TdViewVirtualArch" >
+    update td_view_virtual_arch
+    set arch_code = #{archCode,jdbcType=VARCHAR},
+      route_id = #{routeId,jdbcType=BIGINT},
+      virtual_arch_code = #{virtualArchCode,jdbcType=VARCHAR},
+      virtual_arch_name = #{virtualArchName,jdbcType=VARCHAR},
+      state = #{state,jdbcType=CHAR},
+      staytime_value = #{staytimeValue,jdbcType=BIGINT},
+      staytime_unit = #{staytimeUnit,jdbcType=CHAR},
+      page_code = #{pageCode,jdbcType=VARCHAR},
+      default_tag = #{defaultTag,jdbcType=CHAR}
+    where virtual_arch_id = #{virtualArchId,jdbcType=BIGINT}
+  </update>
+</mapper>

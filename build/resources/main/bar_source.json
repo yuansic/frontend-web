@@ -1,0 +1,88 @@
+{
+	"图例":"柱状图",
+	"repcode": "000000",
+	"quota": {
+		"dim": {
+			"dic": [
+				{
+					"dic_code": "SGW",
+					"dic_name": "短信业务",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171012",
+								"data_set_row": [
+									{
+										"row_num": 2,
+										"row_data": [
+											{
+												"data_code": "RECORD_CNT"
+											}
+										]
+									}
+								]
+							},
+							{
+								"cycle_value": "20171013",
+								"data_set_row": [
+									{
+										"row_num": 1,
+										"row_data": [
+											{
+												"data_code": "RECORD_CNT",
+												"data_value": "6282"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "DAY"
+					}
+				},
+				{
+					"dic_code": "GSW",
+					"dic_name": "数据业务",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171012",
+								"data_set_row": [
+									{
+										"row_num": 2,
+										"row_data": [
+											{
+												"data_code": "RECORD_CNT",
+												"data_value": "400"
+											}
+										]
+									}
+								]
+							},
+							{
+								"cycle_value": "20171013",
+								"data_set_row": [
+									{
+										"row_num": 1,
+										"row_data": [
+											{
+												"data_code": "RECORD_CNT",
+												"data_value": "500"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "DAY"
+					}
+				}
+			],
+			"dim_code": "DIM_BUSI_TYPE",
+			"dim_name": "业务类型"
+		},
+		"quota_code": "JFPJ00007",
+		"quota_name": "话单批价纪录数日汇总"
+	},
+	"repmsg": "OK"
+}

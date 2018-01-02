@@ -1,0 +1,62 @@
+{
+	"repcode": "000000",
+	"quota": {
+		"dim": {
+			"dic": [
+				{
+					"dic_code": "DATA",
+					"dic_name": "数据业务",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171011200437",
+								"data_set_row": [
+									{
+										"row_num": 1,
+										"row_data": [
+											{
+												"data_code": "CODE",
+												"data_value": "SGWH"
+											},
+											{
+												"data_code": "TEXT",
+												"data_value": "jccg8_sgw_20170918174501_00825071.dat"
+											},
+											{
+												"data_code": "DATESTRING",
+												"data_value": "2017-09-18 17:59:26"
+											}
+										]
+									},
+									{
+										"row_num": 2,
+										"row_data": [
+											{
+												"data_code": "CODE",
+												"data_value": "SGSNA"
+											},
+											{
+												"data_code": "TEXT",
+												"data_value": "jccg5_20170918175914_00188261.asn1"
+											},
+											{
+												"data_code": "DATESTRING",
+												"data_value": "2017-09-18 17:59:44"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				}
+			],
+			"dim_code": "DIM_BUSI_TYPE",
+			"dim_name": "业务类型"
+		},
+		"quota_code": "JFCJ00003",
+		"quota_name": "话单采集点延迟最多的TOP6展示"
+	},
+	"repmsg": "OK"
+}

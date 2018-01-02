@@ -1,0 +1,47 @@
+{
+	"quotaCode": "JFCJ00005",
+	"repcode": "000000",
+	"repmsg": "OK",
+	"seriesData": [
+		{
+			"data": [
+				"344",
+				"800",
+				"544"
+			],
+			"legendCode": "PGW",
+			"legendName": "PGW"
+		},
+		{
+			"data": [
+				"3344",
+				"8000",
+				"4444"
+			],
+			"legendCode": "SGW",
+			"legendName": "SGW"
+		},
+		{
+			"data": [
+				"2344",
+				"1000",
+				"3444"
+			],
+			"legendCode": "SGSN",
+			"legendName": "SGSN"
+		}
+	],
+	"title": "语音话单采集文件数量，文件大小近7天数据环比情况",
+	"xAxis": {
+		"boundaryGap": false,
+		"data": [
+			"20171012",
+			"20171011",
+			"20171013"
+		],
+		"show": false,
+		"splitNumber": 0
+	},
+	"yAxis": [
+	]
+}

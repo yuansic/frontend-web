@@ -1,0 +1,26 @@
+[
+	{
+		"factorCode": "FTS__PGWH",
+		"factorName": "FTS__PGWH",
+		"percentage": "100%",
+		"sortIndex": "1"
+	},
+	{
+		"factorCode": "FTS__SGWI",
+		"factorName": "FTS__SGWI",
+		"percentage": "100%",
+		"sortIndex": "2"
+	},
+	{
+		"factorCode": "FTS__SGSNA",
+		"factorName": "FTS__SGSNA",
+		"percentage": "100%",
+		"sortIndex": "3"
+	},
+	{
+		"factorCode": "FTS__SGSNK",
+		"factorName": "FTS__SGSNK",
+		"percentage": "100%",
+		"sortIndex": "4"
+	}
+]

@@ -1,0 +1,35 @@
+{
+	"quotaCode": "JFPJ00007",
+	"repcode": "000000",
+	"repmsg": "OK",
+	"seriesData": [
+		{
+			"data": [
+				"",
+				"400"
+			],
+			"legendCode": "20171012",
+			"legendName": "20171012"
+		},
+		{
+			"data": [
+				"6282",
+				"500"
+			],
+			"legendCode": "20171013",
+			"legendName": "20171013"
+		}
+	],
+	"title": "话单批价纪录数日汇总",
+	"xAxis": {
+		"boundaryGap": false,
+		"data": [
+			"SGW",
+			"GSW"
+		],
+		"show": false,
+		"splitNumber": 0
+	},
+	"yAxis": [
+	]
+}

@@ -1,0 +1,34 @@
+[
+	{
+		"data": "1",
+		"dicCode": "PGW",
+		"quotaCode": "JFCJ00001",
+		"repcode": "000000",
+		"repmsg": "OK",
+		"title": "话单采集积压监控"
+	},
+	{
+		"data": "2",
+		"dicCode": "SGW",
+		"quotaCode": "JFCJ00001",
+		"repcode": "000000",
+		"repmsg": "OK",
+		"title": "话单采集积压监控"
+	},
+	{
+		"data": "3",
+		"dicCode": "SGSN",
+		"quotaCode": "JFCJ00001",
+		"repcode": "000000",
+		"repmsg": "OK",
+		"title": "话单采集积压监控"
+	},
+	{
+		"data": "4",
+		"dicCode": "INTR",
+		"quotaCode": "JFCJ00001",
+		"repcode": "000000",
+		"repmsg": "OK",
+		"title": "话单采集积压监控"
+	}
+]

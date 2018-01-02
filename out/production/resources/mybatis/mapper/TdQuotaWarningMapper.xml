@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.frontend.web.dao.TdQuotaWarningMapper" >
+  <resultMap id="BaseResultMap" type="com.frontend.web.bo.TdQuotaWarning" >
+    <id column="WARNIG_ID" property="warnigId" jdbcType="BIGINT" />
+    <result column="QUOTA_CODE" property="quotaCode" jdbcType="VARCHAR" />
+    <result column="DIM_CODE" property="dimCode" jdbcType="VARCHAR" />
+    <result column="DIM_CODE2" property="dimCode2" jdbcType="VARCHAR" />
+    <result column="DIC_CODE" property="dicCode" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="CHAR" />
+    <result column="WARNING_MIN" property="warningMin" jdbcType="VARCHAR" />
+    <result column="WARNING_MAX" property="warningMax" jdbcType="VARCHAR" />
+    <result column="WARNIG_TYPE" property="warnigType" jdbcType="VARCHAR" />
+    <result column="UPDATE_STAFF_ID" property="updateStaffId" jdbcType="BIGINT" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="CREATE_STAFF_ID" property="createStaffId" jdbcType="BIGINT" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    WARNIG_ID, QUOTA_CODE, DIM_CODE, DIM_CODE2, DIC_CODE, STATE, WARNING_MIN, WARNING_MAX, 
+    WARNIG_TYPE, UPDATE_STAFF_ID, UPDATE_TIME, CREATE_STAFF_ID, CREATE_TIME, REMARK
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.frontend.web.bo.TdQuotaWarningCriteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'false' as QUERYID,
+    <include refid="Base_Column_List" />
+    from td_quota_warning
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <if test="limitStart != null and limitStart>=0" >
+      limit #{limitStart} , #{limitEnd}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from td_quota_warning
+    where WARNIG_ID = #{warnigId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="Long" >
+    delete from td_quota_warning
+    where WARNIG_ID = #{warnigId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.frontend.web.bo.TdQuotaWarningCriteria" >
+    delete from td_quota_warning
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.frontend.web.bo.TdQuotaWarning" >
+    insert into td_quota_warning (WARNIG_ID, QUOTA_CODE, DIM_CODE, 
+      DIM_CODE2, DIC_CODE, STATE, 
+      WARNING_MIN, WARNING_MAX, WARNIG_TYPE, 
+      UPDATE_STAFF_ID, UPDATE_TIME, CREATE_STAFF_ID, 
+      CREATE_TIME, REMARK)
+    values (#{warnigId,jdbcType=BIGINT}, #{quotaCode,jdbcType=VARCHAR}, #{dimCode,jdbcType=VARCHAR}, 
+      #{dimCode2,jdbcType=VARCHAR}, #{dicCode,jdbcType=VARCHAR}, #{state,jdbcType=CHAR}, 
+      #{warningMin,jdbcType=VARCHAR}, #{warningMax,jdbcType=VARCHAR}, #{warnigType,jdbcType=VARCHAR}, 
+      #{updateStaffId,jdbcType=BIGINT}, #{updateTime,jdbcType=TIMESTAMP}, #{createStaffId,jdbcType=BIGINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.frontend.web.bo.TdQuotaWarning" >
+    insert into td_quota_warning
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="warnigId != null" >
+        WARNIG_ID,
+      </if>
+      <if test="quotaCode != null" >
+        QUOTA_CODE,
+      </if>
+      <if test="dimCode != null" >
+        DIM_CODE,
+      </if>
+      <if test="dimCode2 != null" >
+        DIM_CODE2,
+      </if>
+      <if test="dicCode != null" >
+        DIC_CODE,
+      </if>
+      <if test="state != null" >
+        STATE,
+      </if>
+      <if test="warningMin != null" >
+        WARNING_MIN,
+      </if>
+      <if test="warningMax != null" >
+        WARNING_MAX,
+      </if>
+      <if test="warnigType != null" >
+        WARNIG_TYPE,
+      </if>
+      <if test="updateStaffId != null" >
+        UPDATE_STAFF_ID,
+      </if>
+      <if test="updateTime != null" >
+        UPDATE_TIME,
+      </if>
+      <if test="createStaffId != null" >
+        CREATE_STAFF_ID,
+      </if>
+      <if test="createTime != null" >
+        CREATE_TIME,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="warnigId != null" >
+        #{warnigId,jdbcType=BIGINT},
+      </if>
+      <if test="quotaCode != null" >
+        #{quotaCode,jdbcType=VARCHAR},
+      </if>
+      <if test="dimCode != null" >
+        #{dimCode,jdbcType=VARCHAR},
+      </if>
+      <if test="dimCode2 != null" >
+        #{dimCode2,jdbcType=VARCHAR},
+      </if>
+      <if test="dicCode != null" >
+        #{dicCode,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=CHAR},
+      </if>
+      <if test="warningMin != null" >
+        #{warningMin,jdbcType=VARCHAR},
+      </if>
+      <if test="warningMax != null" >
+        #{warningMax,jdbcType=VARCHAR},
+      </if>
+      <if test="warnigType != null" >
+        #{warnigType,jdbcType=VARCHAR},
+      </if>
+      <if test="updateStaffId != null" >
+        #{updateStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createStaffId != null" >
+        #{createStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.frontend.web.bo.TdQuotaWarningCriteria" resultType="java.lang.Integer" >
+    select count(*) from td_quota_warning
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update td_quota_warning
+    <set >
+      <if test="record.warnigId != null" >
+        WARNIG_ID = #{record.warnigId,jdbcType=BIGINT},
+      </if>
+      <if test="record.quotaCode != null" >
+        QUOTA_CODE = #{record.quotaCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dimCode != null" >
+        DIM_CODE = #{record.dimCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dimCode2 != null" >
+        DIM_CODE2 = #{record.dimCode2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dicCode != null" >
+        DIC_CODE = #{record.dicCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.state != null" >
+        STATE = #{record.state,jdbcType=CHAR},
+      </if>
+      <if test="record.warningMin != null" >
+        WARNING_MIN = #{record.warningMin,jdbcType=VARCHAR},
+      </if>
+      <if test="record.warningMax != null" >
+        WARNING_MAX = #{record.warningMax,jdbcType=VARCHAR},
+      </if>
+      <if test="record.warnigType != null" >
+        WARNIG_TYPE = #{record.warnigType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateStaffId != null" >
+        UPDATE_STAFF_ID = #{record.updateStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="record.updateTime != null" >
+        UPDATE_TIME = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.createStaffId != null" >
+        CREATE_STAFF_ID = #{record.createStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="record.createTime != null" >
+        CREATE_TIME = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.remark != null" >
+        REMARK = #{record.remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update td_quota_warning
+    set WARNIG_ID = #{record.warnigId,jdbcType=BIGINT},
+      QUOTA_CODE = #{record.quotaCode,jdbcType=VARCHAR},
+      DIM_CODE = #{record.dimCode,jdbcType=VARCHAR},
+      DIM_CODE2 = #{record.dimCode2,jdbcType=VARCHAR},
+      DIC_CODE = #{record.dicCode,jdbcType=VARCHAR},
+      STATE = #{record.state,jdbcType=CHAR},
+      WARNING_MIN = #{record.warningMin,jdbcType=VARCHAR},
+      WARNING_MAX = #{record.warningMax,jdbcType=VARCHAR},
+      WARNIG_TYPE = #{record.warnigType,jdbcType=VARCHAR},
+      UPDATE_STAFF_ID = #{record.updateStaffId,jdbcType=BIGINT},
+      UPDATE_TIME = #{record.updateTime,jdbcType=TIMESTAMP},
+      CREATE_STAFF_ID = #{record.createStaffId,jdbcType=BIGINT},
+      CREATE_TIME = #{record.createTime,jdbcType=TIMESTAMP},
+      REMARK = #{record.remark,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.frontend.web.bo.TdQuotaWarning" >
+    update td_quota_warning
+    <set >
+      <if test="quotaCode != null" >
+        QUOTA_CODE = #{quotaCode,jdbcType=VARCHAR},
+      </if>
+      <if test="dimCode != null" >
+        DIM_CODE = #{dimCode,jdbcType=VARCHAR},
+      </if>
+      <if test="dimCode2 != null" >
+        DIM_CODE2 = #{dimCode2,jdbcType=VARCHAR},
+      </if>
+      <if test="dicCode != null" >
+        DIC_CODE = #{dicCode,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        STATE = #{state,jdbcType=CHAR},
+      </if>
+      <if test="warningMin != null" >
+        WARNING_MIN = #{warningMin,jdbcType=VARCHAR},
+      </if>
+      <if test="warningMax != null" >
+        WARNING_MAX = #{warningMax,jdbcType=VARCHAR},
+      </if>
+      <if test="warnigType != null" >
+        WARNIG_TYPE = #{warnigType,jdbcType=VARCHAR},
+      </if>
+      <if test="updateStaffId != null" >
+        UPDATE_STAFF_ID = #{updateStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="updateTime != null" >
+        UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createStaffId != null" >
+        CREATE_STAFF_ID = #{createStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where WARNIG_ID = #{warnigId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.frontend.web.bo.TdQuotaWarning" >
+    update td_quota_warning
+    set QUOTA_CODE = #{quotaCode,jdbcType=VARCHAR},
+      DIM_CODE = #{dimCode,jdbcType=VARCHAR},
+      DIM_CODE2 = #{dimCode2,jdbcType=VARCHAR},
+      DIC_CODE = #{dicCode,jdbcType=VARCHAR},
+      STATE = #{state,jdbcType=CHAR},
+      WARNING_MIN = #{warningMin,jdbcType=VARCHAR},
+      WARNING_MAX = #{warningMax,jdbcType=VARCHAR},
+      WARNIG_TYPE = #{warnigType,jdbcType=VARCHAR},
+      UPDATE_STAFF_ID = #{updateStaffId,jdbcType=BIGINT},
+      UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+      CREATE_STAFF_ID = #{createStaffId,jdbcType=BIGINT},
+      CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      REMARK = #{remark,jdbcType=VARCHAR}
+    where WARNIG_ID = #{warnigId,jdbcType=BIGINT}
+  </update>
+  
+  <select id="selectBySectionVo" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select distinct dic_code  ,warning_max  from td_quota_warning t 
+	where t.QUOTA_CODE = #{QuotaCode}
+	and dim_code = #{DimCode} 
+	and dic_code in(
+	select param_value1 from td_chart_data_rule t 
+	where t.rule_code = #{ruleCode} 
+	and param_code  = #{ParamCode}
+	and dic_code = #{DicCode});
+  </select>
+  <select id="selectByArchExtFactorVo" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    SELECT dic_code  ,dic_code  ,
+	min(warning_min) warning_min ,
+	max(warning_max) warning_max
+	FROM td_quota_warning t
+	WHERE t.QUOTA_CODE = #{QuotaCode} 
+	AND dim_code = #{DimCode}
+	AND dic_code IN(
+		SELECT param_value1
+		FROM   td_chart_data_rule t
+		WHERE  t.rule_code = #{ruleCode}
+		AND param_code = #{ParamCode}
+		and dic_code = #{DicCode}
+	)
+	GROUP BY dic_code;
+  </select>
+  
+</mapper>

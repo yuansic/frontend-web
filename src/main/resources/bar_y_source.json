@@ -1,0 +1,464 @@
+{
+	"repcode": "000000",
+	"quota": {
+		"dim": {
+			"dic": [
+				{
+					"dic_code": "IPGW",
+					"dic_name": "IPGW",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171023141034",
+								"data_set_row": [
+									{
+										"row_num": 1,
+										"row_data": [
+											{
+												"data_code": "ERR_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 1,
+										"row_data": [
+											{
+												"data_code": "INV_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 1,
+										"row_data": [
+											{
+												"data_code": "COR_PERCENT",
+												"data_value": "100.00"
+											}
+										]
+									},
+									{
+										"row_num": 1,
+										"row_data": [
+											{
+												"data_code": "DUP_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				},
+				{
+					"dic_code": "RPGW",
+					"dic_name": "RPGW",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171023141034",
+								"data_set_row": [
+									{
+										"row_num": 2,
+										"row_data": [
+											{
+												"data_code": "ERR_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 2,
+										"row_data": [
+											{
+												"data_code": "INV_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 2,
+										"row_data": [
+											{
+												"data_code": "COR_PERCENT",
+												"data_value": "100.00"
+											}
+										]
+									},
+									{
+										"row_num": 2,
+										"row_data": [
+											{
+												"data_code": "DUP_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				},
+				{
+					"dic_code": "GPNR",
+					"dic_name": "GPNR",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171023141034",
+								"data_set_row": [
+									{
+										"row_num": 3,
+										"row_data": [
+											{
+												"data_code": "ERR_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 3,
+										"row_data": [
+											{
+												"data_code": "INV_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 3,
+										"row_data": [
+											{
+												"data_code": "COR_PERCENT",
+												"data_value": "100.00"
+											}
+										]
+									},
+									{
+										"row_num": 3,
+										"row_data": [
+											{
+												"data_code": "DUP_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				},
+				{
+					"dic_code": "GPRS",
+					"dic_name": "GPRS",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171023141034",
+								"data_set_row": [
+									{
+										"row_num": 4,
+										"row_data": [
+											{
+												"data_code": "ERR_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 4,
+										"row_data": [
+											{
+												"data_code": "INV_PERCENT",
+												"data_value": "10.46"
+											}
+										]
+									},
+									{
+										"row_num": 4,
+										"row_data": [
+											{
+												"data_code": "COR_PERCENT",
+												"data_value": "89.52"
+											}
+										]
+									},
+									{
+										"row_num": 4,
+										"row_data": [
+											{
+												"data_code": "DUP_PERCENT",
+												"data_value": "0.02"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				},
+				{
+					"dic_code": "N003",
+					"dic_name": "N003",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171023141034",
+								"data_set_row": [
+									{
+										"row_num": 5,
+										"row_data": [
+											{
+												"data_code": "ERR_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 5,
+										"row_data": [
+											{
+												"data_code": "INV_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 5,
+										"row_data": [
+											{
+												"data_code": "COR_PERCENT",
+												"data_value": "100.00"
+											}
+										]
+									},
+									{
+										"row_num": 5,
+										"row_data": [
+											{
+												"data_code": "DUP_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				},
+				{
+					"dic_code": "N005",
+					"dic_name": "N005",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171023141034",
+								"data_set_row": [
+									{
+										"row_num": 6,
+										"row_data": [
+											{
+												"data_code": "ERR_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 6,
+										"row_data": [
+											{
+												"data_code": "INV_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 6,
+										"row_data": [
+											{
+												"data_code": "COR_PERCENT",
+												"data_value": "100.00"
+											}
+										]
+									},
+									{
+										"row_num": 6,
+										"row_data": [
+											{
+												"data_code": "DUP_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				},
+				{
+					"dic_code": "RSGW",
+					"dic_name": "RSGW",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171023141034",
+								"data_set_row": [
+									{
+										"row_num": 7,
+										"row_data": [
+											{
+												"data_code": "ERR_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 7,
+										"row_data": [
+											{
+												"data_code": "INV_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 7,
+										"row_data": [
+											{
+												"data_code": "COR_PERCENT",
+												"data_value": "100.00"
+											}
+										]
+									},
+									{
+										"row_num": 7,
+										"row_data": [
+											{
+												"data_code": "DUP_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				},
+				{
+					"dic_code": "ISGW",
+					"dic_name": "ISGW",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171023141034",
+								"data_set_row": [
+									{
+										"row_num": 8,
+										"row_data": [
+											{
+												"data_code": "ERR_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 8,
+										"row_data": [
+											{
+												"data_code": "INV_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 8,
+										"row_data": [
+											{
+												"data_code": "COR_PERCENT",
+												"data_value": "100.00"
+											}
+										]
+									},
+									{
+										"row_num": 8,
+										"row_data": [
+											{
+												"data_code": "DUP_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				},
+				{
+					"dic_code": "SCDR",
+					"dic_name": "SCDR",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171023141034",
+								"data_set_row": [
+									{
+										"row_num": 9,
+										"row_data": [
+											{
+												"data_code": "ERR_PERCENT",
+												"data_value": "0.00"
+											}
+										]
+									},
+									{
+										"row_num": 9,
+										"row_data": [
+											{
+												"data_code": "INV_PERCENT",
+												"data_value": "0.02"
+											}
+										]
+									},
+									{
+										"row_num": 9,
+										"row_data": [
+											{
+												"data_code": "COR_PERCENT",
+												"data_value": "99.82"
+											}
+										]
+									},
+									{
+										"row_num": 9,
+										"row_data": [
+											{
+												"data_code": "DUP_PERCENT",
+												"data_value": "0.16"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				}
+			],
+			"dim_code": "DIM_SUB_BUSI_TYPE_YCL",
+			"dim_name": "预处理子业务类型"
+		},
+		"quota_code": "JFYCL00003",
+		"quota_name": "健康指标监控-有效单"
+	},
+	"repmsg": "OK"
+}

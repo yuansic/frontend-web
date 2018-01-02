@@ -1,0 +1,86 @@
+{
+	"quotaCode": "JFYCL00003",
+	"repcode": "000000",
+	"repmsg": "OK",
+	"seriesData": [
+		{
+			"data": [
+				"0.00",
+				"0.00",
+				"0.00",
+				"0.00",
+				"0.00",
+				"0.00",
+				"0.00",
+				"0.00",
+				"0.00"
+			],
+			"legendCode": "ERR_PERCENT",
+			"legendName": "ERR_PERCENT"
+		},
+		{
+			"data": [
+				"0.00",
+				"0.00",
+				"0.00",
+				"10.46",
+				"0.00",
+				"0.00",
+				"0.00",
+				"0.00",
+				"0.02"
+			],
+			"legendCode": "INV_PERCENT",
+			"legendName": "INV_PERCENT"
+		},
+		{
+			"data": [
+				"100.00",
+				"100.00",
+				"100.00",
+				"89.52",
+				"100.00",
+				"100.00",
+				"100.00",
+				"100.00",
+				"99.82"
+			],
+			"legendCode": "COR_PERCENT",
+			"legendName": "COR_PERCENT"
+		},
+		{
+			"data": [
+				"0.00",
+				"0.00",
+				"0.00",
+				"0.02",
+				"0.00",
+				"0.00",
+				"0.00",
+				"0.00",
+				"0.16"
+			],
+			"legendCode": "DUP_PERCENT",
+			"legendName": "DUP_PERCENT"
+		}
+	],
+	"title": "健康指标监控-有效单",
+	"yAxis": [
+		{
+			"boundaryGap": false,
+			"data": [
+				"IPGW",
+				"RPGW",
+				"GPNR",
+				"GPRS",
+				"N003",
+				"N005",
+				"RSGW",
+				"ISGW",
+				"SCDR"
+			],
+			"show": false,
+			"splitNumber": 0
+		}
+	]
+}

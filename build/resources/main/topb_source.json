@@ -1,0 +1,80 @@
+{
+	"repcode": "000000",
+	"quota": {
+		"dim": {
+			"dic": [
+				{
+					"dic_code": "DATA",
+					"dic_name": "数据业务",
+					"dic_data_cycle": {
+						"cycle_data_set": [
+							{
+								"cycle_value": "20171010152802",
+								"data_set_row": [
+									{
+										"row_num": 1,
+										"row_data": [
+											{
+												"data_code": "POINT_ID",
+												"data_value": "FTS__PGWH"
+											},
+											{
+												"data_code": "PERCENT",
+												"data_value": "100%"
+											}
+										]
+									},
+									{
+										"row_num": 2,
+										"row_data": [
+											{
+												"data_code": "POINT_ID",
+												"data_value": "FTS__SGWI"
+											},
+											{
+												"data_code": "PERCENT",
+												"data_value": "100%"
+											}
+										]
+									},
+									{
+										"row_num": 3,
+										"row_data": [
+											{
+												"data_code": "POINT_ID",
+												"data_value": "FTS__SGSNA"
+											},
+											{
+												"data_code": "PERCENT",
+												"data_value": "100%"
+											}
+										]
+									},
+									{
+										"row_num": 4,
+										"row_data": [
+											{
+												"data_code": "POINT_ID",
+												"data_value": "FTS__SGSNK"
+											},
+											{
+												"data_code": "PERCENT",
+												"data_value": "100%"
+											}
+										]
+									}
+								]
+							}
+						],
+						"cycle_type": "REAL"
+					}
+				}
+			],
+			"dim_code": "DIM_BUSI_TYPE",
+			"dim_name": "业务类型"
+		},
+		"quota_code": "JFCJ00004",
+		"quota_name": "话单采集网络连通性监控最低TOP6"
+	},
+	"repmsg": "OK"
+}
